@@ -24,6 +24,56 @@ button {
   border-radius: 40px;
 }
 
+//ANIMATIONS
+@keyframes appendFromLeft {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes appendFromRight {
+  0% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes appendFromBottom {
+  0% {
+    transform: translateY(60%);
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes appendFromTop {
+  0% {
+    transform: translateY(-60%);
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slowReveal {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 //NAVIGATION
 nav {
   display: flex;
@@ -60,7 +110,10 @@ nav {
   z-index: -999;
 
   font-size: 48px;
-
+  h1 {
+    animation: appendFromLeft 2s ease-in-out both;
+    // animation-timeline: view();
+  }
   button {
     position: absolute;
     bottom: 2em;
@@ -69,8 +122,10 @@ nav {
     background-color: $primary-color;
     color: $dark-font-color;
     padding: 1em 1.5em;
+    animation: appendFromLeft 2s ease-in-out both;
   }
 }
+
 //MAIN 1
 .main_1 {
   color: $dark-font-color;
@@ -84,6 +139,8 @@ nav {
   .main1_image {
     width: 650px;
     left: 0;
+    animation: slowReveal 1s ease-in-out both;
+    animation-timeline: view();
   }
   .text_cont {
     display: flex;
@@ -91,6 +148,9 @@ nav {
     row-gap: 20px;
     width: 40%;
     text-align: right;
+
+    animation: appendFromRight 2s ease-in-out;
+    animation-timeline: view();
 
     h3 {
       font-size: 35px;
@@ -131,16 +191,30 @@ nav {
     align-items: center;
     justify-content: center;
     background: url("./assets/main2_bg.png") center no-repeat;
-    background-size: cover;
+    background-size: 60%;
     height: 90%;
     width: 70%;
 
     .adv_group_piece {
       display: flex;
+      animation: appendFromTop 2s ease-in-out both;
+      animation-timeline: view();
+
+      .adv_group_piece_textbox {
+        p {
+          opacity: 0;
+        }
+        p:hover {
+          opacity: 1;
+          transition: all 1s ease-in-out;
+        }
+      }
     }
     .adv_group_piece:nth-child(even) {
       margin-top: 232px;
       align-items: flex-end;
+      animation: appendFromBottom 2s ease-in-out both;
+      animation-timeline: view();
     }
     &::after {
       content: "";
@@ -151,6 +225,66 @@ nav {
       border-radius: 40px;
       background-color: #ccc; // Color of the line
       z-index: -1;
+    }
+  }
+}
+
+//MAIN3
+.main_3 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: $dark-font-color;
+  justify-content: space-between;
+  align-items: center;
+  // background: url("./assets/map_bg.png") center no-repeat;
+  // background-size: 100%;
+  position: relative;
+  .main_3-bgimage {
+    position: absolute;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 35px;
+    font-weight: normal;
+  }
+  .services_block {
+    display: flex;
+
+    width: 50%;
+    justify-content: space-between;
+    .services_column-right {
+      animation: appendFromRight 2s ease-in-out both;
+      animation-timeline: view();
+    }
+    .services_column-left {
+      animation: appendFromLeft 2s ease-in-out both;
+      animation-timeline: view();
+    }
+    .services_column {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2em;
+      width: 40%;
+
+      .services_column_piece {
+        display: flex;
+        align-items: flex-start;
+        column-gap: 1em;
+
+        .services_column_piece_textbox {
+          display: flex;
+          flex-direction: column;
+
+          h4 {
+            font-size: 0.9em;
+          }
+          p {
+            font-size: 0.8em;
+          }
+        }
+      }
     }
   }
 }
