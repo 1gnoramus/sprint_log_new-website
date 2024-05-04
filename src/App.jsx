@@ -18,10 +18,53 @@ import services_cargo from "./assets/services_cargo.png";
 import services_cont from "./assets/services_cont.png";
 import services_multi from "./assets/services_multi.png";
 import services_vagon from "./assets/services_vagon.png";
+import form_img from "./assets/form_img.png";
+import logo2 from "./assets/logo_2.png";
+import social_inst from "./assets/social_inst.png";
+import social_telegram from "./assets/social_telegram.png";
+import social_wapp from "./assets/social_wapp.png";
+import email_icon from "./assets/email_icon.png";
+import phone_icon from "./assets/phone_icon.png";
+import floated_btn from "./assets/floated_btn.png";
+import close from "./assets/close.png";
+import { useState } from "react";
+
 function App() {
+  let [isfloatingActive, setisfloatingActive] = useState(false);
   return (
     <>
       <NavigationBar></NavigationBar>
+      <div className="floating_div">
+        <div
+          className={isfloatingActive ? "social_list-opened" : "social_list"}
+        >
+          <a href="">
+            <img src={social_wapp} alt="" />
+            <h3>Whatsapp</h3>
+          </a>
+          <a href="">
+            <img src={social_inst} alt="" />
+            <h3>Instagram</h3>
+          </a>
+          <a href="">
+            <img src={social_telegram} alt="" />
+            <h3>Telegram</h3>
+          </a>
+        </div>
+        <button
+          onClick={() => {
+            setisfloatingActive(!isfloatingActive);
+          }}
+          className="floating_button"
+        >
+          <img
+            className={isfloatingActive ? "image-animation" : ""}
+            src={isfloatingActive ? close : floated_btn}
+            alt=""
+          />
+        </button>
+      </div>
+
       <div className="intro">
         <h1>SPRINT LOGISTICS</h1>
         <button>Оставить заявку</button>
@@ -189,6 +232,64 @@ function App() {
           </div>
         </div>
       </div>
+      <div className="form_section">
+        <img src={form_img} alt="" />
+        <div className="form_textbox">
+          <h2>
+            Для быстрого просчета доставки Вашего груза оставьте свой запрос
+            здесь
+          </h2>
+          <p>Оставьте Ваши контакты ниже и мы с Вами свяжемся!</p>
+        </div>
+      </div>
+      <footer>
+        <div className="footer_logobox">
+          <img src={logo2} alt="" />
+          <div className="logobox_textbox">
+            <h4>ТОО "SPRINT LOGISTICS"</h4>
+            <p>“Ваш бизнес - наша логистика”</p>
+          </div>
+        </div>
+        <div className="footer_infobox">
+          <h3>Фактический адрес: г. Алматы, ул. Мынбаева 46, офис 427</h3>
+          <div className="infobox_contacts">
+            <div className="contacts_column">
+              <div className="contacts_piece">
+                <img src={phone_icon} alt="" />
+                <div className="contacts_piece_textbox">
+                  <h4>+7 700 088 2815</h4>
+                  <p>Пн. - Пт. с 9:00 - 18:00</p>
+                </div>
+              </div>
+              <div className="contacts_piece">
+                <img src={phone_icon} alt="" />
+                <div className="contacts_piece_textbox">
+                  <h4>+7 701 581 0999</h4>
+                  <p>Пн. - Пт. с 9:00 - 18:00</p>
+                </div>
+              </div>
+            </div>
+            <div className="contacts_column">
+              <div className="contacts_piece">
+                <img src={email_icon} alt="" />
+                <h4>marketing@splog.com.kz</h4>
+              </div>
+              <div className="contacts_piece">
+                <img src={email_icon} alt="" />
+                <h4>info@splog.kz</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="footer_socialbox">
+          <p>Свяжитесь с нами!</p>
+          <div className="socialbox_row">
+            <img src={social_wapp} alt="" />
+            <img src={social_inst} alt="" />
+            <img src={social_telegram} alt="" />
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

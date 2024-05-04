@@ -18,6 +18,10 @@ body {
   background-color: $primary-color;
   color: $light-font-color;
 }
+a {
+  text-decoration: none;
+  color: white;
+}
 button {
   border: none;
   cursor: pointer;
@@ -74,6 +78,16 @@ button {
     opacity: 1;
   }
 }
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 //NAVIGATION
 nav {
   display: flex;
@@ -94,6 +108,56 @@ nav {
   }
   img:hover {
     cursor: pointer;
+  }
+}
+//FLOATING BUTTON
+.floating_div {
+  .floating_button {
+    position: fixed;
+    z-index: 999;
+    bottom: 25px;
+    right: 40px;
+    background-color: $secondary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 3px $primary-color;
+    padding: 0.1em;
+    img {
+      width: 3em;
+      height: 3em;
+    }
+    .image-animation {
+      animation: fadeInOut 1s ease-in-out;
+    }
+  }
+  .social_list {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    right: 40px;
+    bottom: 80px;
+  }
+}
+
+.social_list-opened {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  position: fixed;
+  z-index: 999;
+  right: 40px;
+  bottom: 100px;
+
+  animation: appendFromRight 2s ease-in-out both;
+
+  a {
+    display: flex;
+    background-color: $secondary-color;
+    border-radius: 20px;
+    padding: 0.5em;
+    align-items: center;
+    column-gap: 1em;
   }
 }
 
@@ -160,6 +224,7 @@ nav {
   .div25 {
     position: absolute;
     right: 0;
+    z-index: 1;
     top: 0;
   }
   .div50 {
@@ -237,12 +302,11 @@ nav {
   color: $dark-font-color;
   justify-content: space-between;
   align-items: center;
-  // background: url("./assets/map_bg.png") center no-repeat;
-  // background-size: 100%;
   position: relative;
   .main_3-bgimage {
     position: absolute;
     width: 100%;
+    height: 100%;
   }
 
   h2 {
@@ -285,6 +349,74 @@ nav {
           }
         }
       }
+    }
+  }
+}
+//FORM SECTION
+.form_section {
+  position: relative;
+  display: flex;
+  color: $dark-font-color;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  .form_textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 6em;
+    width: 30%;
+  }
+}
+//FOOTER
+footer {
+  background-color: $secondary-color;
+  padding: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .footer_logobox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    img {
+      width: 150px;
+    }
+  }
+  .footer_infobox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+    h3 {
+      font-weight: normal;
+    }
+    .infobox_contacts {
+      display: flex;
+      width: 100%;
+      column-gap: 2em;
+      .contacts_column {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1em;
+        width: 50%;
+        .contacts_piece {
+          display: flex;
+          column-gap: 1em;
+          img {
+            width: 1.5em;
+            height: 1.5em;
+          }
+          .contacts_piece_textbox {
+          }
+        }
+      }
+    }
+  }
+
+  .footer_socialbox {
+    .socialbox_row {
+      display: flex;
+      column-gap: 1em;
     }
   }
 }
