@@ -11,6 +11,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     ></link>
+    
     <App />
   </React.StrictMode>
 );
