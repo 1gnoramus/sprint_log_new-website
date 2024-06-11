@@ -268,6 +268,10 @@ nav {
 
     .adv_group_piece {
       display: flex;
+      width: 220px;
+      height: 250px;
+      justify-content: start;
+      align-items: start;
       animation: appendFromTop 2s ease-in-out both;
       animation-timeline: view();
 
@@ -280,13 +284,87 @@ nav {
           transition: all 1s ease-in-out;
         }
       }
-      .adv_group_piece_imgs {
+      // .adv_group_piece_imgs {
+      //   position: relative;
+      //   .diagram_img {
+      //     height: 65px;
+      //     position: absolute;
+      //     top: 9px;
+      //     left: 9px;
+      //   }
+      // }
+
+      .custom_diagram_piece {
         position: relative;
-        .diagram_img {
-          height: 65px;
+        width: 50%;
+        height: 100%;
+        .circle_outline {
           position: absolute;
-          top: 9px;
-          left: 9px;
+          top: 0;
+          left: 0;
+          height: 75px;
+          width: 75px;
+          border-radius: 100%;
+          border: solid 4px #c12126;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            height: 65px;
+          }
+        }
+        .circle_filled {
+          position: absolute;
+          top: 200px;
+          left: 32px;
+          height: 20px;
+          width: 20px;
+          border-radius: 30px;
+
+          background-color: #c12126;
+        }
+        .line {
+          position: absolute;
+          top: 80px;
+          left: 40px;
+          height: 120px;
+          width: 3px;
+          background-color: #c12126;
+        }
+      }
+      .custom_diagram_piece-reversed {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        .circle_outline {
+          position: absolute;
+          top: 120px;
+          left: 0;
+          height: 75px;
+          width: 75px;
+          border-radius: 100%;
+          border: solid 4px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            height: 65px;
+          }
+        }
+        .circle_filled {
+          position: absolute;
+          top: 0px;
+          left: 32px;
+          height: 20px;
+          width: 20px;
+          border-radius: 30px;
+        }
+        .line {
+          position: absolute;
+          top: 0px;
+          left: 40px;
+          height: 120px;
+          width: 3px;
         }
       }
     }

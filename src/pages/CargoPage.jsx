@@ -5,10 +5,15 @@ import adv_purple from "../assets/adv_purple.png";
 import adv_red from "../assets/adv_red.png";
 import cust_risks from "../assets/cust_risks.png";
 import deliv_econ from "../assets/deliv_econ.png";
+import log_econ from "../assets/log_econ.png";
+import stor_econ from "../assets/stor_econ.png";
+import consol from "../assets/consol.png";
 
-import { AdvantagesDiagram } from "../ReusableComponents/AdvantagesDiagram";
+// import { AdvantagesDiagram } from "../ReusableComponents/AdvantagesDiagram";
 import { IntroSection } from "../sections/IntroSection";
 import { MainSection } from "../sections/MainSection";
+import { CustomDiagramPiece } from "../ReusableComponents/CustomDiagramPiece";
+import { CustomDiagramPieceReversed } from "../ReusableComponents/CustomDiagramPieceReversed";
 
 export function CargoPage() {
   return (
@@ -32,42 +37,59 @@ export function CargoPage() {
               <h4>Сокращение расходов на логистику</h4>
               <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>{" "}
-            <img src={adv_yellow} alt="" />
+            <CustomDiagramPieceReversed
+              image={log_econ}
+              color={"#F06730"}
+            ></CustomDiagramPieceReversed>
           </div>
           <div className="adv_group_piece even">
             <div className="adv_group_piece_textbox">
               <h4>Экономия на доставке</h4>
               <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>{" "}
-            <div className="adv_group_piece_imgs">
+            <CustomDiagramPiece
+              image={deliv_econ}
+              color={"#05AAC0"}
+            ></CustomDiagramPiece>
+            {/* <div className="adv_group_piece_imgs">
               <img src={adv_purple} alt="" />
 
               <img className="diagram_img" src={deliv_econ} alt="" />
-            </div>
+            </div> */}
           </div>
           <div className="adv_group_piece">
             <div className="adv_group_piece_textbox">
               <h4>Снижение таможенных рисков</h4>
               <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>{" "}
-            <img src={adv_green} alt="" />
+            <CustomDiagramPieceReversed
+              image={cust_risks}
+              color={"#C12126"}
+            ></CustomDiagramPieceReversed>
           </div>
           <div className="adv_group_piece even">
             <div className="adv_group_piece_textbox">
               <h4>Уменьшение затрат на хранение</h4>
               <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>{" "}
-            <div className="adv_group_piece_imgs">
-              <img src={adv_red} alt="" />
-              <img className="diagram_img" src={cust_risks} alt="" />
-            </div>
+            {/* <div className="adv_group_piece_imgs"> */}
+            {/* <img src={adv_red} alt="" /> */}
+            <CustomDiagramPiece
+              image={stor_econ}
+              color={"#05AAC0"}
+            ></CustomDiagramPiece>
+            {/* </div> */}
           </div>
           <div className="adv_group_piece">
             <div className="adv_group_piece_textbox">
               <h4>Консолидация товаров</h4>
               <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>{" "}
-            <img src={adv_pink} alt="" />
+            <CustomDiagramPieceReversed
+              image={consol}
+              color={"#C12126"}
+            ></CustomDiagramPieceReversed>
+            {/* <img src={adv_pink} alt="" /> */}
           </div>
         </div>
       </div>
