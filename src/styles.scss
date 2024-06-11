@@ -169,6 +169,8 @@ nav {
   background: url("./assets/intro_bg.png") center no-repeat;
   background-size: cover;
   height: 720px;
+  padding: 1em;
+  text-align: center;
 
   display: flex;
   align-items: center;
@@ -278,6 +280,15 @@ nav {
           transition: all 1s ease-in-out;
         }
       }
+      .adv_group_piece_imgs {
+        position: relative;
+        .diagram_img {
+          height: 65px;
+          position: absolute;
+          top: 9px;
+          left: 9px;
+        }
+      }
     }
     .adv_group_piece:nth-child(even) {
       margin-top: 232px;
@@ -337,6 +348,7 @@ nav {
       width: 40%;
 
       .services_column_piece {
+        cursor: pointer;
         display: flex;
         align-items: flex-start;
         column-gap: 1em;
