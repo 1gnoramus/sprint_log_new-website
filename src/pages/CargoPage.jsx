@@ -51,11 +51,6 @@ export function CargoPage() {
               image={deliv_econ}
               color={"#05AAC0"}
             ></CustomDiagramPiece>
-            {/* <div className="adv_group_piece_imgs">
-              <img src={adv_purple} alt="" />
-
-              <img className="diagram_img" src={deliv_econ} alt="" />
-            </div> */}
           </div>
           <div className="adv_group_piece">
             <div className="adv_group_piece_textbox">
@@ -72,13 +67,10 @@ export function CargoPage() {
               <h4>Уменьшение затрат на хранение</h4>
               <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>{" "}
-            {/* <div className="adv_group_piece_imgs"> */}
-            {/* <img src={adv_red} alt="" /> */}
             <CustomDiagramPiece
               image={stor_econ}
               color={"#05AAC0"}
             ></CustomDiagramPiece>
-            {/* </div> */}
           </div>
           <div className="adv_group_piece">
             <div className="adv_group_piece_textbox">
@@ -89,7 +81,6 @@ export function CargoPage() {
               image={consol}
               color={"#C12126"}
             ></CustomDiagramPieceReversed>
-            {/* <img src={adv_pink} alt="" /> */}
           </div>
         </div>
       </div>
