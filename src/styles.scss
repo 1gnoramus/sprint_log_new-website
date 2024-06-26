@@ -422,7 +422,6 @@ nav {
     .services_column {
       display: flex;
       flex-direction: column;
-      row-gap: 2em;
       width: 40%;
 
       .services_column_piece {
@@ -430,7 +429,13 @@ nav {
         display: flex;
         align-items: flex-start;
         column-gap: 1em;
+        padding: 1em;
+        border-radius: 10px;
 
+        transition: background 12s ease-in-out;
+        &:hover {
+          background: linear-gradient(to right, #ff7f5f00, $secondary-color);
+        }
         .services_column_piece_textbox {
           display: flex;
           flex-direction: column;
@@ -447,6 +452,7 @@ nav {
           }
         }
       }
+
       .services_column_piece::before {
         content: "";
         position: absolute;
