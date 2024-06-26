@@ -3,11 +3,11 @@ import { IntroSection } from "../sections/IntroSection";
 import { MainSection } from "../sections/MainSection";
 import { CustomDiagramPiece } from "../ReusableComponents/CustomDiagramPiece";
 import { CustomDiagramPieceReversed } from "../ReusableComponents/CustomDiagramPieceReversed";
-import cust_risks from "../assets/cust_risks.png";
-import deliv_econ from "../assets/deliv_econ.png";
-import log_econ from "../assets/log_econ.png";
+import police_car from "../assets/police_car.png";
+import papers from "../assets/papers.png";
+import takelaj from "../assets/takelaj.png";
 import stor_econ from "../assets/stor_econ.png";
-import consol from "../assets/consol.png";
+import special_auto from "../assets/special_auto.png";
 export function SamosvalPage() {
   return (
     <>
@@ -27,48 +27,45 @@ export function SamosvalPage() {
         <div className="adv_group">
           <div className="adv_group_piece ">
             <div className="adv_group_piece_textbox">
-              <h4>Предоставление специализированного транспортного средства</h4>
-              <p>
+              <h4>Предоставление специализированного транспорта</h4>
+              {/* <p>
                 Предоставление специализированного транспортного средства с
                 грузоподъёмностью от 40 - 200 тонн (тралы, площадки и тд)
-              </p>
+              </p> */}
             </div>{" "}
             <CustomDiagramPieceReversed
-              image={log_econ}
-              color={"#F06730"}
+              image={special_auto}
+              color={"#C12126"}
             ></CustomDiagramPieceReversed>
           </div>
-          <div className="adv_group_piece even">
+          <div className="adv_group_piece">
             <div className="adv_group_piece_textbox">
               <h4>Такелажные работы</h4>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              {/* <p>Lorem ipsum dolor sit amet consectetur.</p> */}
             </div>{" "}
             <CustomDiagramPiece
-              image={deliv_econ}
-              color={"#05AAC0"}
+              image={takelaj}
+              color={"#E5DF48"}
             ></CustomDiagramPiece>
           </div>
           <div className="adv_group_piece">
             <div className="adv_group_piece_textbox">
-              <h4>
-                Оформление специальных разрешений на перевозку негабаритных
-                грузов
-              </h4>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </div>{" "}
+              <h4>Оформление специальных разрешений</h4>
+              {/* <p>Lorem ipsum dolor sit amet consectetur.</p> */}
+            </div>
             <CustomDiagramPieceReversed
-              image={cust_risks}
-              color={"#C12126"}
+              image={papers}
+              color={"#05AAC0"}
             ></CustomDiagramPieceReversed>
           </div>
-          <div className="adv_group_piece even">
+          <div className="adv_group_piece ">
             <div className="adv_group_piece_textbox">
-              <h4>Сопровождение в пути (автомобиль прикрытие)</h4>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <h4>Сопровождение в пути</h4>
+              {/* <p>Lorem ipsum dolor sit amet consectetur.</p> */}
             </div>{" "}
             <CustomDiagramPiece
-              image={stor_econ}
-              color={"#05AAC0"}
+              image={police_car}
+              color={"#05C050"}
             ></CustomDiagramPiece>
           </div>
         </div>

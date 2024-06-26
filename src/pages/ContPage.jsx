@@ -3,9 +3,10 @@ import { IntroSection } from "../sections/IntroSection";
 import { MainSection } from "../sections/MainSection";
 import { CustomDiagramPiece } from "../ReusableComponents/CustomDiagramPiece";
 import { CustomDiagramPieceReversed } from "../ReusableComponents/CustomDiagramPieceReversed";
-import cust_risks from "../assets/cust_risks.png";
-import deliv_econ from "../assets/deliv_econ.png";
-import log_econ from "../assets/log_econ.png";
+import сont_load from "../assets/сont_load.png";
+import agility from "../assets/agility.png";
+import safe from "../assets/safe.png";
+import papers from "../assets/papers.png";
 import stor_econ from "../assets/stor_econ.png";
 import consol from "../assets/consol.png";
 export function ContPage() {
@@ -27,52 +28,52 @@ export function ContPage() {
         <div className="adv_group">
           <div className="adv_group_piece ">
             <div className="adv_group_piece_textbox">
-              <h4>Сокращение расходов на логистику</h4>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <h4>Удобство погрузки и выгрузки</h4>
+              {/* <p>Lorem ipsum dolor sit amet consectetur.</p> */}
             </div>{" "}
             <CustomDiagramPieceReversed
-              image={log_econ}
+              image={сont_load}
+              color={"#C12126"}
+            ></CustomDiagramPieceReversed>
+          </div>
+          <div className="adv_group_piece even">
+            <div className="adv_group_piece_textbox">
+              <h4>Упрощение документооборота</h4>
+              {/* <p>Lorem ipsum dolor sit amet consectetur.</p> */}
+            </div>{" "}
+            <CustomDiagramPiece
+              image={papers}
+              color={"#05AAC0"}
+            ></CustomDiagramPiece>
+          </div>
+          <div className="adv_group_piece">
+            <div className="adv_group_piece_textbox">
+              <h4>Минимизация краж и потерь</h4>
+              {/* <p>Lorem ipsum dolor sit amet consectetur.</p> */}
+            </div>{" "}
+            <CustomDiagramPieceReversed
+              image={safe}
               color={"#F06730"}
             ></CustomDiagramPieceReversed>
           </div>
           <div className="adv_group_piece even">
             <div className="adv_group_piece_textbox">
-              <h4>Экономия на доставке</h4>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </div>{" "}
-            <CustomDiagramPiece
-              image={deliv_econ}
-              color={"#05AAC0"}
-            ></CustomDiagramPiece>
-          </div>
-          <div className="adv_group_piece">
-            <div className="adv_group_piece_textbox">
-              <h4>Снижение таможенных рисков</h4>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </div>{" "}
-            <CustomDiagramPieceReversed
-              image={cust_risks}
-              color={"#C12126"}
-            ></CustomDiagramPieceReversed>
-          </div>
-          <div className="adv_group_piece even">
-            <div className="adv_group_piece_textbox">
-              <h4>Уменьшение затрат на хранение</h4>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <h4>Гибкость в выборе маршрутов</h4>
+              {/* <p>Lorem ipsum dolor sit amet consectetur.</p> */}
             </div>
             <CustomDiagramPiece
-              image={stor_econ}
-              color={"#05AAC0"}
+              image={agility}
+              color={"#C12126"}
             ></CustomDiagramPiece>
           </div>
           <div className="adv_group_piece">
             <div className="adv_group_piece_textbox">
-              <h4>Консолидация товаров</h4>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <h4>Облегчение складирования товаров</h4>
+              {/* <p>Lorem ipsum dolor sit amet consectetur.</p> */}
             </div>{" "}
             <CustomDiagramPieceReversed
-              image={consol}
-              color={"#C12126"}
+              image={stor_econ}
+              color={"#05AAC0"}
             ></CustomDiagramPieceReversed>
           </div>
         </div>

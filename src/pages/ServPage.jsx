@@ -4,10 +4,11 @@ import { MainSection } from "../sections/MainSection";
 import { CustomDiagramPiece } from "../ReusableComponents/CustomDiagramPiece";
 import { CustomDiagramPieceReversed } from "../ReusableComponents/CustomDiagramPieceReversed";
 import cust_risks from "../assets/cust_risks.png";
-import deliv_econ from "../assets/deliv_econ.png";
-import log_econ from "../assets/log_econ.png";
-import stor_econ from "../assets/stor_econ.png";
-import consol from "../assets/consol.png";
+import police_car from "../assets/police_car.png";
+import project from "../assets/project.png";
+import broker from "../assets/broker.png";
+import consultation from "../assets/consultation.png";
+import insurance from "../assets/insurance.png";
 export function ServPage() {
   return (
     <>
@@ -28,51 +29,51 @@ export function ServPage() {
           <div className="adv_group_piece ">
             <div className="adv_group_piece_textbox">
               <h4>Страхование груза</h4>
-              <p>Lorem ipsum dolor sit amet.</p>
+              {/* <p>Lorem ipsum dolor sit amet.</p> */}
             </div>{" "}
             <CustomDiagramPieceReversed
-              image={log_econ}
-              color={"#F06730"}
+              image={insurance}
+              color={"#05C050"}
             ></CustomDiagramPieceReversed>
           </div>
           <div className="adv_group_piece even">
             <div className="adv_group_piece_textbox">
               <h4>Брокерские услуги</h4>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              {/* <p>Lorem ipsum dolor sit amet consectetur.</p> */}
             </div>{" "}
             <CustomDiagramPiece
-              image={deliv_econ}
-              color={"#05AAC0"}
+              image={broker}
+              color={"#E5DF48"}
             ></CustomDiagramPiece>
           </div>
           <div className="adv_group_piece">
             <div className="adv_group_piece_textbox">
               <h4>Проектная работа</h4>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              {/* <p>Lorem ipsum dolor sit amet consectetur.</p> */}
             </div>{" "}
             <CustomDiagramPieceReversed
-              image={cust_risks}
-              color={"#C12126"}
+              image={project}
+              color={"#F06730"}
             ></CustomDiagramPieceReversed>
           </div>
           <div className="adv_group_piece even">
             <div className="adv_group_piece_textbox">
               <h4>Охранное сопровождение</h4>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              {/* <p>Lorem ipsum dolor sit amet consectetur.</p> */}
             </div>{" "}
             <CustomDiagramPiece
-              image={stor_econ}
-              color={"#05AAC0"}
+              image={police_car}
+              color={"#05C050"}
             ></CustomDiagramPiece>
           </div>
           <div className="adv_group_piece">
             <div className="adv_group_piece_textbox">
               <h4>Консультационная работа</h4>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              {/* <p>Lorem ipsum dolor sit amet consectetur.</p> */}
             </div>{" "}
             <CustomDiagramPieceReversed
-              image={cust_risks}
-              color={"#C12126"}
+              image={consultation}
+              color={"#05AAC0"}
             ></CustomDiagramPieceReversed>
           </div>
         </div>

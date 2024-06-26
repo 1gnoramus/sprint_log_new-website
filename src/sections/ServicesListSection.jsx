@@ -63,7 +63,7 @@ export function ServicesListSection() {
           >
             <img src={services_cont} alt="" />
             <div className="services_column_piece_textbox">
-              <h4>Контейнерные перевозки из Китая</h4>
+              <h4>Контейнерные перевозки </h4>
               <p>
                 Доверьте контейнерные перевозки Sprint Logistics - мы доставим
                 Ваш груз из Турции и Китая в Казахстан быстро, надежно и по
