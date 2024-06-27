@@ -49,9 +49,15 @@ export function FooterSection() {
       <div className="footer_socialbox">
         <p>Свяжитесь с нами!</p>
         <div className="socialbox_row">
-          <img src={social_wapp} alt="" />
-          <img src={social_inst} alt="" />
-          <img src={social_telegram} alt="" />
+          <a href="https://wa.me/77000882813">
+            <img src={social_wapp} alt="" />
+          </a>
+          <a href="https://instagram.com/sprint_log?igshid=ZDdkNTZiNTM=">
+            <img src={social_inst} alt="" />
+          </a>
+          <a href="https://t.me/sprintlog">
+            <img src={social_telegram} alt="" />
+          </a>
         </div>
       </div>
     </footer>
