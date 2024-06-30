@@ -48,6 +48,7 @@ export function FooterSection() {
       </div>
       <div className="footer_socialbox">
         <p>Свяжитесь с нами!</p>
+        <p>Свяжитесь с нами!</p>
         <div className="socialbox_row">
           <a href="https://wa.me/77000882813">
             <img src={social_wapp} alt="" />
