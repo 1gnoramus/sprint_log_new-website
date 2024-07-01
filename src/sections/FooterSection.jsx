@@ -53,7 +53,7 @@ export function FooterSection() {
           <a href="https://wa.me/77000882813">
             <img src={social_wapp} alt="" />
           </a>
-          <a href="https://instagram.com/sprint_log?igshid=ZDdkNTZiNTM=">
+          <a href="https://.com/sprint_log?igshid=ZDdkNTZiNTM=">
             <img src={social_inst} alt="" />
           </a>
           <a href="https://t.me/sprintlog">
